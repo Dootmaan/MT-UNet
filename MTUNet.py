@@ -274,8 +274,8 @@ class GaussianTrans(nn.Module):
         x, atten_x_full, atten_y_full, value_full = x  # atten_x_full(b, h, w, w, c)   atten_y_full(b, w, h, h, c) value_full(b, h, w, c)
         new_value_full = torch.zeros_like(value_full)
 
-        for r in range(x.shape[1]):  # 相应的行
-            for c in range(x.shape[2]):  # 相应的列
+        for r in range(x.shape[1]):  # row
+            for c in range(x.shape[2]):  # col
                 atten_x = atten_x_full[:, r, c, :]  # (b, w)
                 atten_y = atten_y_full[:, c, r, :]  # (b, h)
 
