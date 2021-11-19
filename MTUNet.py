@@ -6,6 +6,7 @@ import numpy as np
 import torch
 from torch import nn
 
+
 class ConvBNReLU(nn.Module):
     def __init__(self,
                  c_in,
@@ -121,7 +122,7 @@ class MEAttention(nn.Module):
         B, N, C = x.shape
         x = self.query_liner(x)
         x = x.view(B, N, self.num_heads, -1).permute(0, 2, 1,
-                                                     3)  #（1， 32， 225， 32）
+                                                     3)  #(1, 32, 225, 32)
 
         attn = self.linear_0(x)
 
@@ -255,11 +256,11 @@ class DlightConv(nn.Module):
     def forward(self, x):
         h = x
         avg_x = torch.mean(x, dim=-2)  # (b, n, n, 1, h)
-        x_prob = self.softmax(self.linear(avg_x))  # （b, n, n, win)
+        x_prob = self.softmax(self.linear(avg_x))  # (b, n, n, win)
 
         x = torch.mul(h,
                       x_prob.unsqueeze(-1))  # (b, p, p, 16, h) (b, p, p, 16)
-        x = torch.sum(x, dim=-2)  # （b, n, n, 1, h)
+        x = torch.sum(x, dim=-2)  # (b, n, n, 1, h)
         return x
 
 
@@ -380,8 +381,7 @@ class Stem(nn.Module):
         super(Stem, self).__init__()
         self.model = U_encoder()
         self.trans_dim = ConvBNReLU(256, 256, 1, 1, 0)  #out_dim, model_dim
-        self.position_embedding = nn.Parameter(torch.zeros(
-            (1, 784, 256)))  #缺少n_patches, hiddensize参数
+        self.position_embedding = nn.Parameter(torch.zeros((1, 784, 256)))
 
     def forward(self, x):
 
@@ -489,13 +489,13 @@ class MTUNet(nn.Module):
             x, skip = self.encoder[i](x)
             skips.append(skip)
             B, C, H, W = x.shape  #  (1, 512, 8, 8)
-            x = x.permute(0, 2, 3, 1).contiguous().view(B, -1, C)  # （B, N, C)
+            x = x.permute(0, 2, 3, 1).contiguous().view(B, -1, C)  # (B, N, C)
         x = self.bottleneck(x)  # (1, 25, 1024)
         B, N, C = x.shape
         x = x.view(B, int(np.sqrt(N)), -1, C).permute(0, 3, 1, 2)
         for i in range(len(self.decoder)):
             x = self.decoder[i](x,
-                                skips[len(self.decoder) - i - 1])  # (B， N, C）
+                                skips[len(self.decoder) - i - 1])  # (B, N, C)
             B, N, C = x.shape
             x = x.view(B, int(np.sqrt(N)), int(np.sqrt(N)),
                        C).permute(0, 3, 1, 2)
