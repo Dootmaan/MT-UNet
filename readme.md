@@ -6,7 +6,7 @@ It should be mentioned that we are currently conducting some statistical evaluat
 
 - Click [here](https://drive.google.com/file/d/1WvhNT-lMlLfpiljYSBzDee3y3EiyIwW8/view?usp=sharing) for the pretrained weights for Synapse. 
 
-- Click [here](https://drive.google.com/file/d/1WvhNT-lMlLfpiljYSBzDee3y3EiyIwW8/view?usp=sharing) for the pretrained weights for ACDC. The authors of TransUnet did not provide the split of ACDC dataset. Therefore, we conducted all the ACDC experiments based on our own dataset split, and that is why the results may look a little different from the claim of other papers. 
+- Click [here](https://drive.google.com/file/d/1WvhNT-lMlLfpiljYSBzDee3y3EiyIwW8/view?usp=sharing) for the pretrained weights for ACDC. The authors of TransUnet did not provide the split of ACDC dataset. Therefore, we conducted all the ACDC experiments based on our own dataset split.
 
 ## Update 2021/11/19
 
