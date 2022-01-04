@@ -2,7 +2,7 @@
 
 ## Update 2022/01/04
 
-We have further trained our MT-UNet and it turns out to have a better result on Synapse with 79.20% DSC. We have changed the pretrained weights of Synapse to this version and will also update the results in our final version of paper.
+We have further trained our MT-UNet and it turns out to have a better result on Synapse with 79.20% DSC. We have changed the pretrained weights of Synapse to this version and will also update the results in our paper.
 
 ## Update 2022/01/03
 
