@@ -1,16 +1,20 @@
 # MT-UNet
 
+## Update 2022/01/05
+
+By another round of training based on previous weights, our model also achieved a better performance on ACDC (91.61% DSC). We have changed the weight for ACDC to this newest version and you can check it out for yourself. However, previous versions of weights are still available on Google Drive, and you can access them via previous commits. 
+
 ## Update 2022/01/04
 
-We have further trained our MT-UNet and it turns out to have a better result on Synapse with 79.20% DSC. We have changed the pretrained weights of Synapse to this version and will also update the results in our paper.
+We have further trained our MT-UNet and it turns out to have a better result on Synapse with 79.20% DSC. We have changed the public weights of Synapse to this version and will also update the results in our paper.
 
 ## Update 2022/01/03
 
 It should be mentioned that we are currently conducting some statistical evaluations on our model and these results will be also made public on this site.
 
-- **[Updated]** Click [here](https://drive.google.com/file/d/1frQAK05UtiAO8rvKG9y5GXABaH70_-Hu/view?usp=sharing) for the pretrained weights for Synapse. 
+- **[Updated]** Click [here](https://drive.google.com/file/d/1frQAK05UtiAO8rvKG9y5GXABaH70_-Hu/view?usp=sharing) for our weights used on Synapse. 
 
-- Click [here](https://drive.google.com/file/d/1DQFNeVbq2GNYhgv0mdTw-7yBTgqUWYBr/view?usp=sharing) for the pretrained weights for ACDC. The authors of TransUnet did not provide the split of ACDC dataset. Therefore, we conducted all the ACDC experiments based on our own dataset split.
+- **[Updated]** Click [here](https://drive.google.com/file/d/1eo6d-d_kR0qbHBIHq49TQ1CFpPLypJUT/view?usp=sharing) for our weights used on ACDC. The authors of TransUnet did not provide the split of ACDC dataset. Therefore, we conducted all the ACDC experiments based on our own dataset split.
 
 ## Update 2021/11/19
 
