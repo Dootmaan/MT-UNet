@@ -39,6 +39,8 @@ The weights will be saved to "./checkpoint/ACDC/mtunet" while the predictions wi
 
 ---
 
+We have tested the code to make sure it works. However, if you still find some bugs, feel free to make a pull request or simply raise an issue.
+
 *You are also encouraged to read the update log below to know more about this repo.*
 
 ## Update 2022/01/05
