@@ -1,0 +1,7 @@
+*.log
+*.png
+.DS_Store
+*.pyc
+*/__pycache__
+*.pth
+*.nii.gz

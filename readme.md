@@ -2,7 +2,7 @@
 
 ## Update 2022/01/05
 
-By another round of training based on previous weights, our model also achieved a better performance on ACDC (91.61% DSC). We have changed the weight for ACDC to this newest version and you can check it out for yourself. However, previous versions of weights are still available on Google Drive, and you can access them via previous commits. 
+By another round of training based on previous weights, our model also achieved a better performance on ACDC (91.61% DSC). We have changed the weights for ACDC to this newest version and you can check it out for yourself. However, previous versions of weights are still available on Google Drive, and you can access them via previous commits. 
 
 ## Update 2022/01/04
 
