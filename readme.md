@@ -10,9 +10,9 @@ Please note that, if you have requested our code before, that code is depreciate
 
 **1. Prepare your dataset.**
 
-- Synapse dataset can be found at [the repo of TransUnet](https://github.com/Beckschen/TransUNet). However, we will also upload this dataset later.
+- Synapse dataset can be found at [the repo of TransUnet](https://github.com/Beckschen/TransUNet). 
 
-- ACDC dataset is a little complicated, since we found that previous works uses different partition but compares with each other directly. To make sure our experiment is more fair, we uses our own partition and rerun all the methods by ourselves. We will upload the preprocessed ACDC dataset later, or you can download the dataset by yourself at [here](https://acdc.creatis.insa-lyon.fr/description/databases.html) 
+- ACDC dataset is a little complicated, since we found that previous works uses different partition but compares with each other directly. To make sure our experiment is more fair, we uses our own partition and rerun all the methods by ourselves. We have uploaded the preprocessed ACDC dataset [here](https://drive.google.com/file/d/13qYHNIWTIBzwyFgScORL2RFd002vrPF2/view?usp=sharing), or you can download the dataset by yourself at [here](https://acdc.creatis.insa-lyon.fr/description/databases.html) 
 
 **2. Pull the code**
 
