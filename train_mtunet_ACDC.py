@@ -80,13 +80,14 @@ def val():
     logging.info("Validation ===>")
     dc_sum=0
     model.eval()
-    for i_batch, sampled_batch in enumerate(valloader):
-        image_batch, label_batch = sampled_batch["image"], sampled_batch["label"]
-        image_batch, label_batch = image_batch.type(torch.FloatTensor), label_batch.type(torch.FloatTensor)
-        image_batch, label_batch = image_batch.cuda().unsqueeze(1), label_batch.cuda().unsqueeze(1)
+    for i, val_sampled_batch in enumerate(valloader):
+        val_image_batch, val_label_batch = val_sampled_batch["image"], val_sampled_batch["label"]
+        val_image_batch, val_label_batch = val_image_batch.type(torch.FloatTensor), val_label_batch.type(torch.FloatTensor)
+        val_image_batch, val_label_batch = val_image_batch.cuda().unsqueeze(1), val_label_batch.cuda().unsqueeze(1)
 
-        outputs = model(image_batch)
-        dc_sum+=dc(outputs.cpu().data.numpy(),label_batch.cpu().data.numpy())
+        val_outputs = model(val_image_batch)
+        val_outputs = torch.argmax(torch.softmax(outputs, dim=1), dim=1).squeeze(0)
+        dc_sum+=dc(val_outputs.cpu().data.numpy(),val_label_batch[:].cpu().data.numpy())
     logging.info("avg_dsc: %f" % (dc_sum/len(valloader)))
     return dc_sum/len(valloader)
 
