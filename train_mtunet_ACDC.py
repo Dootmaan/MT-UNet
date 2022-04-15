@@ -86,7 +86,7 @@ def val():
         val_image_batch, val_label_batch = val_image_batch.cuda().unsqueeze(1), val_label_batch.cuda().unsqueeze(1)
 
         val_outputs = model(val_image_batch)
-        val_outputs = torch.argmax(torch.softmax(outputs, dim=1), dim=1).squeeze(0)
+        val_outputs = torch.argmax(torch.softmax(val_outputs, dim=1), dim=1).squeeze(0)
         dc_sum+=dc(val_outputs.cpu().data.numpy(),val_label_batch[:].cpu().data.numpy())
     logging.info("avg_dsc: %f" % (dc_sum/len(valloader)))
     return dc_sum/len(valloader)
