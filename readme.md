@@ -1,5 +1,9 @@
 # MT-UNet
 
+## Update 2024/04/15
+
+We have uploaded the lists_Synapse.zip file in ./dataset/ based on the recently raised issues. Please use it along with the Synapse dataset you downloaded.
+
 ## Update 2022/03/05
 
 The paper has been accepted by ICASSP 2022. The complete code is released today. 
@@ -12,7 +16,7 @@ Please note that, if you have requested our code before, that code is depreciate
 
 - Synapse dataset can be found at [the repo of TransUnet](https://github.com/Beckschen/TransUNet). 
 
-- ACDC dataset is a little complicated, since we found that previous works uses different partition but compares with each other directly. To make sure our experiment is more fair, we uses our own partition and rerun all the methods by ourselves. We have uploaded the preprocessed ACDC dataset [here](https://drive.google.com/file/d/13qYHNIWTIBzwyFgScORL2RFd002vrPF2/view?usp=sharing), or you can download the dataset by yourself at [here](https://acdc.creatis.insa-lyon.fr/description/databases.html) 
+- ACDC dataset is a little complicated, since we found that previous works use different partitions but compare with each other directly. To make sure our experiment is fair, we use our own partition and rerun all the methods by ourselves. We have uploaded the preprocessed ACDC dataset [here](https://drive.google.com/file/d/13qYHNIWTIBzwyFgScORL2RFd002vrPF2/view?usp=sharing), or you can download the dataset by yourself at [here](https://acdc.creatis.insa-lyon.fr/description/databases.html) 
 
 **2. Clone the code**
 
@@ -53,7 +57,7 @@ We have further trained our MT-UNet and it turns out to have a better result on 
 
 ## Update 2022/01/03
 
-It should be mentioned that we are currently conducting some statistical evaluations on our model and these results will be also made public on this site.
+It should be mentioned that we are currently conducting some statistical evaluations on our model and these results will also be made public on this site.
 
 - **[Updated]** Click [here](https://drive.google.com/file/d/1frQAK05UtiAO8rvKG9y5GXABaH70_-Hu/view?usp=sharing) for our weights used on Synapse. 
 
@@ -61,7 +65,7 @@ It should be mentioned that we are currently conducting some statistical evaluat
 
 ## Update 2021/11/19
 
-- Thank you for your interest in our work. We have uploaded the code of our MTUNet to help peers conduct further research on it. However, rest of the codes (such as the training and testing codes) are currently not so well organized, and we plan to release them upon paper publication. It also should be noted that they are still avaliable right now with a rough appearance. Please contact us for these codes if you are new to this field or having difficulty in applying our model to your own dataset.
+- Thank you for your interest in our work. We have uploaded the code of our MTUNet to help peers conduct further research on it. However, the rest of the codes (such as the training and testing codes) are currently not so well organized, and we plan to release them upon paper publication. It also should be noted that they are still available right now with a rough appearance. Please contact us for these codes if you are new to this field or having difficulty applying our model to your own dataset.
 
 ---
 
