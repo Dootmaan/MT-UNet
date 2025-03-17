@@ -1,5 +1,9 @@
 # MT-UNet
 
+## Update 2025/03/17
+
+The preprocessed datasets are no longer available in the previous Google Drive links. They have now been moved to Zenodo for long-term sharing. You can find these two files here: https://zenodo.org/records/15038913
+
 ## Update 2024/04/15
 
 We have uploaded the lists_Synapse.zip file in ./dataset/ based on the recently raised issues. Please use it along with the Synapse dataset you downloaded.
