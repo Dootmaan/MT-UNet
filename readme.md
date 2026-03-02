@@ -1,5 +1,9 @@
 # MT-UNet
 
+## Update 2026/03/02
+
+The pretrained weights of Synapse and ACDC have now been moved to Zenodo as well: https://zenodo.org/records/18831591
+
 ## Update 2025/03/17
 
 The preprocessed datasets are no longer available in the previous Google Drive links. They have now been moved to Zenodo for long-term sharing. You can find these two files here: https://zenodo.org/records/15038913
